@@ -1,0 +1,15 @@
+<div class="container mt-5">
+    <div *ngIf="!productMode" style="text-align: center">   
+      <div class="text-center">
+        <button class="btn btn-primary btn-lg mr-2" (click)="productToggle()">Add Product</button>
+      </div>
+    </div>
+  
+    <div *ngIf="productMode" class="container">
+      <div class="row justify-content-center">
+        <div class="col-4">
+          <app-product (cancelProduct)="cancelproductMode($event)"></app-product>
+        </div>
+      </div>
+    </div>
+  </div>
